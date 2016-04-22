@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<canvas id="canvas" style="display: block; margin: 50px auto; border: 1px solid #000"></canvas>
+	<script type="text/javascript">
+		window.onload = function () {
+			var canvas = document.getElementById('canvas');
+			canvas.width = 1024;
+			canvas.height = 768;
+			var context = canvas.getContext('2d');
+			context.strokeStyle = 'red';
+			context.lineWidth = 3;
+			context.beginPath();
+			context.arc(300, 300, 50, 0.5*Math.PI, 1.5*Math.PI);
+		 	// context.closePath();
+			context.stroke();
+		}
+	</script>
+</body>
+</html>

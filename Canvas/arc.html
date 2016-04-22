@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用canvas绘制弧和圆</title>
+</head>
+<body>
+	<canvas id='canvas' style="display: block; margin: 50px auto; border: 1px solid #000">此浏览器不支持canvas</canvas>
+	<script type="text/javascript">
+		window.onload = function () {
+			var canvas = document.getElementById('canvas');
+			canvas.width = 1024;
+			canvas.height = 768;
+			var context = canvas.getContext('2d');
+
+			context.lineWidth = 5;
+			context.strokeStyle = 'red';
+			context.fillStyle = 'red';
+			// context.arc(300, 300, 200, 0, 0.5*Math.PI, true);
+			// context.stroke();
+			// for (var i = 0; i < 10; i++) {
+			// 	context.beginPath();
+			// 	context.arc(50+i*100 , 60 , 40, 0, 2*Math.PI*(i+1)/10);
+			// 	context.closePath();
+			// 	;
+			// 	context.stroke()
+			// }
+			// for (var i = 0; i < 10; i++) {
+			// 	context.beginPath();
+			// 	context.arc(50+i*100 , 60 , 40, 0, 2*Math.PI*(i+1)/10);
+			// 	// context.closePath();
+			// 	;
+			// 	context.stroke()
+			// }
+			for (var i = 0; i < 10; i++) {
+				context.beginPath();
+				context.arc(50+i*100 , 60 , 40, 0, 2*Math.PI*(i+1)/10, true);
+				context.closePath();
+				;
+				// context.stroke();
+				// /**
+ 				// 使用fill时，无论有没有使用closePath(),canvas都会将图像进行封闭。
+				context.fill();
+			}
+
+		}
+	</script>
+</body>
+</html>

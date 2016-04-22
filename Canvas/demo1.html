@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas 1</title>
+</head>
+<body>
+	<canvas id="canvas" style="border: 1px solid #000;display: block;margin: 10px auto" width="1024px" height="768px">
+		当前浏览器不支持Canvas，请更换浏览器后再试
+	</canvas>
+	<script type="text/javascript">
+		window.onload = function () {
+			var canvas = document.getElementById('canvas');
+		var context = canvas.getContext('2d');
+		context.moveTo(100,100);
+		context.lineTo(700,700);
+		context.lineTo(100,700);
+		context.lineTo(100,100);
+		
+		context.fillStyle = 'rgb(2,100,30)';
+		context.fill();
+
+		context.lineWidth = 5;
+		context.strokeStyle = 'red';
+		context.stroke();
+
+		context.beginPath();
+		context.moveTo(200,100);
+		context.lineTo(700,600);
+		context.strokeStyle = 'black';
+		context.stroke();
+		context.closePath();
+		}
+
+	</script>
+</body>
+</html>
